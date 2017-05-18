@@ -1,0 +1,173 @@
+
+.jumbotron {
+    margin-top: 70px;
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.jumbotron-cover {
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,168,255,0.5);
+
+    box-shadow: 0 5px 5px #ccc;
+}
+
+.jumbotron-text {
+    height: 300px;
+    margin-top: 150px;
+}
+.jumbotron-text h1 {
+    color: inherit;
+    font-size: 50px;
+}
+
+#login {
+    margin-top: 25px;
+    width: 100%;
+    height: 550px;
+    background-color: white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #444;
+
+}
+
+#login-container {
+    padding: 20px;
+    color: black;
+    text-align: center;
+    whitespace: nowrap;
+}
+
+#login-container p {
+    color: #888;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+#login-horizontal {
+    width: 90%;
+    margin-left: 5%;
+    height: 1px;
+    background-color: #cccccc;
+}
+
+input {
+    width: 80%;
+    height: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    border: solid 1px #c9c9c9;
+    transition: border 0.3s;
+    font-size: 15px;
+}
+
+input:focus,
+input.focus {
+    outline: none;
+    border: solid 1px #00ccff;
+}
+
+
+#button_container {
+    white-space: nowrap;
+}
+
+#signup {
+    background-color: #337ab7;
+}
+#signup:hover {
+    background-color: #004c99;
+}
+
+#signin {
+    background-color: #5cb85c;
+}
+
+#signin:hover {
+    background-color: green;
+}
+
+.button {
+    margin-top: 10px;
+    margin-right: 4%;
+    display: inline-block;
+    height: 30px;
+    width: 43%;
+    text-align: center;
+    border-radius: 3px;
+    color: white;
+    line-height: 30px;
+    box-shadow: 2px 2px 5px #ccc;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+
+.button:last-child {
+    margin-right: 0;
+}
+
+#warning {
+    font-size: 15px;
+    margin-top: 20px;
+    color: darkred;
+}
+
+#search_school_box {
+    vertical-align: middle;
+    margin: 0;
+    box-shadow: 0px 0px 10px #333;
+}
+
+#search_submit {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    color: #337ab7;
+    font-size: 10px;
+    vertical-align: middle;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #333;
+}
+
+#search_submit:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #337ab7;
+}
+
+/* bouncing arrow */
+#showMore {
+    color: white;
+    position: absolute;
+    margin: auto;
+    top: 300px; bottom: 0;
+    left: 0; right: 0;
+    width: 50px;
+    height: 20px;
+    -webkit-animation: bouncing 2s infinite ease-in-out;
+    text-shadow: 0 0 4px black;
+}
+@-webkit-keyframes bouncing {
+    0%, 100%  { -webkit-transform: translateY(0); }
+    50%  { -webkit-transform: translateY(-10px); }
+}
+
+#showMore:hover {
+    cursor: pointer;
+}
