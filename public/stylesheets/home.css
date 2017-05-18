@@ -27,6 +27,10 @@
     font-size: 50px;
 }
 
+.jumbotron-text h1, .jumbotron-text h2 {
+    text-shadow: 0 0 5px black;
+}
+
 #login {
     margin-top: 25px;
     width: 100%;
@@ -43,7 +47,6 @@
     padding: 20px;
     color: black;
     text-align: center;
-    whitespace: nowrap;
 }
 
 #login-container p {
@@ -152,22 +155,83 @@ input.focus {
 }
 
 /* bouncing arrow */
+#showMoreSection{
+    z-index: 1;
+}
+
 #showMore {
     color: white;
     position: absolute;
     margin: auto;
-    top: 300px; bottom: 0;
-    left: 0; right: 0;
-    width: 50px;
-    height: 20px;
+    top: 600px;
+    width: 100%;
+    text-align: center;
     -webkit-animation: bouncing 2s infinite ease-in-out;
     text-shadow: 0 0 4px black;
 }
 @-webkit-keyframes bouncing {
     0%, 100%  { -webkit-transform: translateY(0); }
-    50%  { -webkit-transform: translateY(-10px); }
+    50%  { -webkit-transform: translateY(-5px); }
 }
 
 #showMore:hover {
     cursor: pointer;
+}
+
+#showMoreText {
+    color: white;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    top: 585px;
+    text-shadow: 0 0 5px black;
+}
+
+#examples {
+    padding: 80px 0;
+}
+
+#examples h1 {
+    margin-top: 0;
+}
+
+.application {
+    padding: 25px 0 15px 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 0 5px #888;
+
+
+    color: #555;
+}
+.application:first-child {
+    margin-toP: 20px;
+}
+
+.application strong {
+    color: black;
+}
+
+.application:hover {
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.school_icon {
+    width: 100%;
+    position: relative;
+}
+
+.date, .link {
+    font-size: 15px;
+    color: #888;
+}
+.link {
+    text-align: right;
 }

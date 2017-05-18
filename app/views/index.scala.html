@@ -14,6 +14,7 @@
         <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <script src="@routes.Assets.at("javascripts/jquery-3.2.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/lib/jquery.waypoints.min.js")" type="text/javascript"></script>
 
             <!-- page specifics -->
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
@@ -33,7 +34,7 @@
             <div class="jumbotron-cover">
                 <div class="container_12">
                     <div id="jumbotron-text" class="grid_8 jumbotron-text" >
-                        <h1 style="margin-bottom: 50px;">最真实的申请数据</h1>
+                        <h1 id="taglines" style="margin-bottom: 50px;">最真实的申请数据</h1>
                         <h2 style="margin-bottom: 50px;">看录取，最好的留学生申请数据库</h2>
                         <form id="search">
                             <input id="search_school_box" placeholder="输入感兴趣的学校, 查看录取申请" />
@@ -65,12 +66,131 @@
 
                 </div>
             </div>
-
-            <div class="showMore" id="showMore">
-                <i class="fa fa-angle-down" style="font-size: 100px;" aria-hidden="true"></i>
+            <div id="showMoreSection">
+                <div id="showMoreText">
+                        查看案例
+                </div>
+                <div class="showMore" id="showMore" >
+                    <i class="fa fa-angle-down" style="font-size: 50px;" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
-        <div class="placeholder" style="height: 1000px;">
+
+        <div id="examples">
+            <div class="container_12">
+                <h1 style="color:#555"><i class="fa fa-cloud" style="color:#0bcbf5" aria-hidden="true"></i>&nbsp最新上传申请</h1>
+                <div class="container_12">
+                    <div class="application">
+                        <img class="grid_2 school_icon" src="@routes.Assets.at("images/schools/harvard.png")" />
+
+                        <div class="grid_7"><strong>Harvard University 哈佛大学 </strong></div>
+                        <div class="grid_3 date">上传日期: 2017-5-18</div>
+                        <div class="grid_9"><strong>录取阶段</strong>: EA <strong>录取专业</strong>: Physics</div>
+                        <div class="grid_9"><strong>TA的成绩: </strong>SAT:-/-, ACT: 32, TOEFL: 97, GPA: 3.92/4.0</div>
+                        <p class="grid_4">
+                            <strong>TA的活动: </strong><br />
+                            1. National awards of ... <br />
+                            2. The leader of an organzation called ... <br />
+                            3. Champion of International olympics ... <br />
+                        </p>
+                        <p class="grid_5">
+                            <strong>TA的文书: </strong><br/>
+                            &nbsp&nbsp&nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet efficitur diam.
+                            Suspendisse tincidunt augue quis rhoncus placerat...
+                        </p>
+                    </div>
+                    <div class="application">
+                        <img class="grid_2 school_icon" src="@routes.Assets.at("images/schools/harvard.png")" />
+
+                        <div class="grid_7"><strong>Harvard University 哈佛大学 </strong></div>
+                        <div class="grid_3 date">上传日期: 2017-5-18</div>
+                        <div class="grid_9"><strong>录取阶段</strong>: EA <strong>录取专业</strong>: Physics</div>
+                        <div class="grid_9"><strong>TA的成绩: </strong>SAT:-/-, ACT: 32, TOEFL: 97, GPA: 3.92/4.0</div>
+                        <p class="grid_4">
+                            <strong>TA的活动: </strong><br />
+                            1. National awards of ... <br />
+                            2. The leader of an organzation called ... <br />
+                            3. Champion of International olympics ... <br />
+                        </p>
+                        <p class="grid_5">
+                            <strong>TA的文书: </strong><br/>
+                            &nbsp&nbsp&nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet efficitur diam.
+                            Suspendisse tincidunt augue quis rhoncus placerat...
+                        </p>
+                    </div>
+                    <div class="application">
+                        <img class="grid_2 school_icon" src="@routes.Assets.at("images/schools/harvard.png")" />
+
+                        <div class="grid_7"><strong>Harvard University 哈佛大学 </strong></div>
+                        <div class="grid_3 date">上传日期: 2017-5-18</div>
+                        <div class="grid_9"><strong>录取阶段</strong>: EA <strong>录取专业</strong>: Physics</div>
+                        <div class="grid_9"><strong>TA的成绩: </strong>SAT:-/-, ACT: 32, TOEFL: 97, GPA: 3.92/4.0</div>
+                        <p class="grid_4">
+                            <strong>TA的活动: </strong><br />
+                            1. National awards of ... <br />
+                            2. The leader of an organzation called ... <br />
+                            3. Champion of International olympics ... <br />
+                        </p>
+                        <p class="grid_5">
+                            <strong>TA的文书: </strong><br/>
+                            &nbsp&nbsp&nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet efficitur diam.
+                            Suspendisse tincidunt augue quis rhoncus placerat...
+                        </p>
+                    </div>
+                    <div class="application">
+                        <img class="grid_2 school_icon" src="@routes.Assets.at("images/schools/harvard.png")" />
+
+                        <div class="grid_7"><strong>Harvard University 哈佛大学 </strong></div>
+                        <div class="grid_3 date">上传日期: 2017-5-18</div>
+                        <div class="grid_9"><strong>录取阶段</strong>: EA <strong>录取专业</strong>: Physics</div>
+                        <div class="grid_9"><strong>TA的成绩: </strong>SAT:-/-, ACT: 32, TOEFL: 97, GPA: 3.92/4.0</div>
+                        <p class="grid_4">
+                            <strong>TA的活动: </strong><br />
+                            1. National awards of ... <br />
+                            2. The leader of an organzation called ... <br />
+                            3. Champion of International olympics ... <br />
+                        </p>
+                        <p class="grid_5">
+                            <strong>TA的文书: </strong><br/>
+                            &nbsp&nbsp&nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet efficitur diam.
+                            Suspendisse tincidunt augue quis rhoncus placerat...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="footer_wrap" class="container_12">
+                <div class="grid_3 footer_item">
+                    <div class="footer_item_wrap">
+                        <h3>关于看录取</h3>
+                        <div class="infolinks"><a href="about">关于我们</a></div>
+                        <div class="infolinks"><a href="contact">联系我们</a></div>
+                        <div class="infolinks"><a href="terms">使用条款</a></div>
+                    </div>
+                </div>
+                <div class="grid_3 footer_item">
+                    <div class="footer_item_wrap">
+                        <h3>联系方式</h3>
+                        <p>深圳市南山区深南大道喜年中心516 <br /><br />
+                            0755-888 8888
+                        </p>
+
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <h3>看录取公众号</h3>
+                    <p>&nbsp&nbsp&nbsp 扫一扫并关注我们的微信公众号，第一时间了解高校最新录取申请</p>
+                </div>
+                <div class="grid_3">
+                    <img style="width:80%;" src="@routes.Assets.at("images/official_qrcode.jpeg")" />
+                </div>
+            </div>
+        </div>
+
+        <div id="copyright">
+            Copyright © 2017 看录取网络科技有限公司 版权所有 | 粤ICP备12000138号-1
         </div>
     </body>
 </html>
