@@ -13,6 +13,18 @@
     "Microsoft YaHei", "微软雅黑",
     STXihei, "华文细黑", "Helvetica",
     serif;
+    outline: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.grid_alpha {
+    margin-left: 0;
+}
+
+.grid_omega {
+    margin-right: 0;
 }
 
 .hide {
@@ -30,6 +42,16 @@ a:hover {
 body {
     background-color: #eee;
 }
+
+.fa-question-circle {
+    color: #ccc;
+}
+.fa-question-circle:hover {
+    cursor: pointer;
+    color: white;
+}
+
+/* navbar */
 
 .logo {
     height: 50px;
@@ -79,6 +101,9 @@ input:-webkit-autofill:active {
     -webkit-box-shadow:0 0 0 50px #eee inset;
     -webkit-text-fill-color: #999;
 }
+
+
+/* footer */
 
 #footer {
     box-shadow: inset 0 15px 15px -15px #555;

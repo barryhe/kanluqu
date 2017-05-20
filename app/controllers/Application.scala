@@ -9,4 +9,7 @@ class Application extends Controller {
     Ok(views.html.index("看录取 - 最好的中国留学生申请数据库"))
   }
 
+  def search = Action {
+    Ok(views.html.search("看录取 - 搜索"))
+  }
 }

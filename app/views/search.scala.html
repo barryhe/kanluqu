@@ -1,3 +1,5 @@
+@(message:String)
+
 @(message: String)
 
 
@@ -16,58 +18,62 @@
         <script src="@routes.Assets.at("javascripts/jquery-3.2.1.min.js")" type="text/javascript"></script>
         <script src="@routes.Assets.at("javascripts/lib/jquery.waypoints.min.js")" type="text/javascript"></script>
 
+            <!-- slider -->
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/lib/jquery-ui.css")">
+        <script src="@routes.Assets.at("javascripts/lib/jquery-ui.min.js")" type="text/javascript"></script>
+
+
             <!-- page specifics -->
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/home.css")">
-        <script src="@routes.Assets.at("javascripts/home.js")" type="text/javascript"></script>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/search.css")">
+        <script src="@routes.Assets.at("javascripts/search.js")" type="text/javascript"></script>
+        <style>
+        </style>
     </head>
     <body>
-        @navbar_guest()
-
-        <div class="jumbotron" style="background-image:url('@routes.Assets.at("images/background.jpg")')">
-            <div class="jumbotron-cover">
-                <div class="container_12">
-                    <div id="jumbotron-text" class="grid_8 jumbotron-text" >
-                        <h1 id="taglines" style="margin-bottom: 50px;">最真实的申请数据</h1>
-                        <h2 style="margin-bottom: 50px;">看录取，最好的留学生申请数据库</h2>
-                        <form id="search">
-                            <input id="search_school_box" placeholder="输入感兴趣的学校, 查看录取申请" />
-                            <div id="search_submit" >
-                                &nbsp&nbsp<i class="fa fa-search" aria-hidden="true" style="line-height:32px;color:inherit;
-                                    font-size: 22px;"></i>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="grid_4">
-                        <div id="login">
-                            <div id="login-container">
-                                <p>微信扫一扫即刻登录</p>
-                                <img src="@routes.Assets.at("images/qrcode.jpeg")" style="width: 100%" />
-                                <div id="login-horizontal"></div>
-                                <p style="margin-top: 10px;margin-bottom:5px;">新用户注册</p>
-                                <form id="allInOne">
-                                    <input type="email" placeholder="您的常用邮箱" id="username" />
-                                    <input type="password" placeholder="密码" id="password" />
-                                    <div id="button_container">
-                                        <div id="signup" class="button" onclick="register();">注册</div><div id="signin" onclick="login();" class="button">登录</div>
-                                    </div>
-                                </form>
-                                <div id="warning"></div>
-                            </div>
+        @navbar()
+        <div id="search_box">
+                <div class="container_12 ">
+                    <div id="search_wrap">
+                        <h1 class="grid_12" style="margin-top: 0">搜索名校录取申请</h1>
+                        <div class="grid_12">
+                            <form id="search">
+                                <input type="text" id="search_school_box" placeholder=" 输入感兴趣的学校, 查看录取申请" />
+                            </form>
                         </div>
+                        <h1 class="grid_12">高级搜索</h1>
+                        <div id="SAT">
+                            <div class="tag grid_2"> <i class="fa fa-question-circle" aria-hidden="true"></i> (新)SAT分数:</div>
+                            <label id="SAT-min" class="grid_1 grid_alpha"></label>
+                            <div id="SAT-range" class="slider grid_2"></div>
+                            <label id="SAT-max" class="grid_1"></label>
+                        </div>
+                        <div id="ACT">
+                            <div class="tag grid_2"> <i class="fa fa-question-circle" aria-hidden="true"></i> ACT分数:</div>
+                            <label id="ACT-min" class="grid_1 grid_alpha"></label>
+                            <div id="ACT-range" class="slider grid_2"></div>
+                            <label id="ACT-max" class="grid_1"></label>
+                        </div>
+
+                        <p class="grid_12"> <!-- dividing --></p>
+
+                        <div id="TOEFL">
+                            <div class="grid_2 tag"> <i class="fa fa-question-circle" aria-hidden="true"></i> TOEFL分数:</div>
+                            <label id="TOEFL-min" class="grid_1 grid_alpha"></label>
+                            <div id="TOEFL-range" class="slider grid_2"></div>
+                            <label id="TOEFL-max" class="grid_1"></label>
+                        </div>
+                        <div id="GPA">
+                            <div class="grid_2 tag"> <i class="fa fa-question-circle" aria-hidden="true"></i> GPA(绩点):</div>
+                            <label id="GPA-min" class="grid_1 grid_alpha"></label>
+                            <div id="GPA-range" class="slider grid_2"></div>
+                            <label id="GPA-max" class="grid_1"></label>
+                        </div>
+
+                        <p class="grid_12"> <!-- dividing --></p>
+
                     </div>
-
-
                 </div>
-            </div>
-            <div id="showMoreSection">
-                <div id="showMoreText">
-                        查看案例
-                </div>
-                <div class="showMore" id="showMore" >
-                    <i class="fa fa-angle-down" style="font-size: 50px;" aria-hidden="true"></i>
-                </div>
-            </div>
         </div>
 
         <div id="examples">

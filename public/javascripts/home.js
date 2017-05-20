@@ -63,7 +63,7 @@ $(document).ready(function(){
         that.waypoint({
             handler: function() {
                 that.removeClass("hide");
-                that.addClass("animated zoomIn"); // set up the scroll animation here
+                that.addClass("animated slideInLeft"); // set up the scroll animation here
             },
             offset: '100%'
         });
